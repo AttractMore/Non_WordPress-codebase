@@ -1,0 +1,76 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+******************************************************************/
+@include fontface('icomoon', 'wf0xg1');
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu7:before {
+    content: "\ec71";
+}
+.icon-arrow-right4:before {
+    content: "\edbe";
+}
+.icon-arrow-left4:before {
+    content: "\edc6";
+}
+.icon-facebook:before {
+    content: "\ea90";
+}
+.icon-twitter:before {
+    content: "\ea96";
+}
+.icon-rss:before {
+    content: "\ea9b";
+}
+.icon-linkedin2:before {
+    content: "\eaca";
+}
+.icon-youtube:before {
+	content: "\eefc";
+}
+
+
+/*$sans-serif:        "effra", Arial, sans-serif;
+*/
+/*	This is the font stack used by WordPress 4.6. See https://make.wordpress.org/core/2016/07/07/native-fonts-in-4-6/ and https://bitsofco.de/the-new-system-font-stack/  */
+$sans-serif:        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+
+/*p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+}
+*/
+.no-hyphenate {
+  -ms-word-wrap: normal;
+  word-break: normal; //non-standard css for webkit
+  word-wrap: normal;
+  -webkit-hyphens: none;
+     -moz-hyphens: none;
+          hyphens: none;
+}

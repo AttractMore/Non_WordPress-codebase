@@ -1,0 +1,62 @@
+.header {
+	background-color: $white;
+	border-bottom:1px solid $meta-gray;
+	min-height:3.5em;
+}
+#inner-header {
+	position:relative;
+}
+
+#logo {
+	margin: 0.3em 0 0;
+	width:200px;
+
+	a {
+		color: $theme-green;
+		font-size:1.5em;
+		background:url(../../library/images/attractmore-logo-small.png) no-repeat;
+		text-indent:100%;
+		white-space:nowrap;	/* Scott Kellum method http://css-tricks.com/examples/ImageReplacement/ */
+		overflow:hidden;
+		width:200px;
+		height:37px;
+		display:block;
+		outline:none;
+	}
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+	#logo {
+		a {
+			background:url(../../library/images/attractmore-logo-small@2x.png) no-repeat;
+			background-size: 200px 37px;		}
+	}
+}
+@media only screen and (min-width: $bp-small) {
+	#logo {
+		width:300px;
+		a {
+			background:url(../../library/images/attractmore-logo-large.png) no-repeat;
+			font-size:2em;
+			width:300px;
+			height:56px;
+		}
+	}
+}
+@media only screen and (min-width: $bp-small) and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-width: $bp-small) and (min--moz-device-pixel-ratio: 1.5), 
+only screen and (min-width: $bp-small) and (min-device-pixel-ratio: 1.5) {
+	#logo {
+		a {
+			background:url(../../library/images/attractmore-logo-large@2x.png) no-repeat;
+			background-size: 300px 56px;		}
+	}
+}
+@media only screen and (min-width: $bp-large) {
+	#logo {
+		float:left;
+	}
+}
+
+

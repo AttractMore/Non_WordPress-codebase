@@ -1,0 +1,194 @@
+/******************************************************************
+Site Name:
+Author: Roger Knght
+
+Stylesheet: Base Stylesheet
+
+******************************************************************/
+
+/*********************
+GENERAL STYLES
+*********************/
+html, body {
+	overflow-x: hidden; /* prevents horizontal scroll bars */
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* disable webkit tap highlight */
+}
+
+body {
+	font-family: $sans-serif;
+	@include set-font-size(1);
+	color: $text-color;
+	background-color: $white;
+  	-webkit-font-smoothing: antialiased;
+  	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+	min-width:320px;
+}
+blockquote, q {
+	quotes: "" "";
+	border-left: 4px solid $theme-green;
+	padding: 1em 2em;
+	margin: 0 0 1.5em;
+
+	&:before,
+	&:after {
+		content: "";
+	}
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0; /* Extra wide images within figure tags don't overflow the content area. */
+}
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+#container {
+	min-height:100%;
+	padding:0;
+	margin:0;
+}
+.wrap {
+	width: 96%;
+	margin: 0 auto;
+	max-width:1200px;
+}
+/*********************
+LINK STYLES
+*********************/
+
+a, a:visited {
+	color: $link-color;
+	text-decoration:none;
+
+	/* on hover */
+	&:hover, &:focus {
+		color: $link-hover;
+	}
+
+	/* on click */
+	&:active {
+
+	}
+
+	/* mobile tap color */
+	&:link {
+		/*
+		this highlights links on iPhones/iPads.
+		so it basically works like the :hover selector
+		for mobile devices.
+		*/
+		-webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+	}
+}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-weight: 400;
+	color:$theme-green;
+	/*
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+/* Typographic scale = 1.3333 see http://type-scale.com/ */
+h1, .h1 {
+	@include set-font-size(1.777);
+}
+h2, .h2 {
+	@include set-font-size(1.333);
+}
+h3, .h3 {
+	font-size: 1em;
+	text-transform:uppercase;
+}
+h4, .h4 {
+	font-size:1em;
+	margin-bottom:0.5em;
+}
+h5, .h5 {
+	@include set-font-size(0.846);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+/*********************
+CONTENT STYLES
+*********************/
+p {
+	@include set-font-size(1.05);
+	-ms-word-wrap: normal;
+	word-break: normal; //non-standard css for webkit
+	word-wrap: normal;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	color:$text-color !important;
+	margin: 0 0 1.5em;
+}
+
+ul, ol {
+	list-style: disc; 
+	li {
+		margin-left: 1em;
+		padding-left:1em;
+		margin-bottom: 0.5em;
+	}
+}
+ol {
+	list-style:decimal;
+}
+
+img {
+	margin: 0 0 1.5em 0;
+	max-width: 100%;
+	height: auto;
+}
+
+.alignleft, img.alignleft, 
+.alignright, img.alignright,
+.aligncenter, img.aligncenter {
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+	clear: both;
+	width:auto;
+	max-width:100%;
+	height:auto;
+}
+
+
+@media screen and (min-width:$bp-small) {
+	.alignleft, img.alignleft {
+		margin:0.5em 1.5em 1.5em 0;
+		display: inline;
+		float: left;
+		max-width:40%;
+		height:auto;
+	}
+	.alignright, img.alignright {
+		margin:0.5em 0 1.5em 1.5em;
+		display: inline;
+		float: right;
+		max-width:40%;
+		height:auto;
+	}
+}
+
+/*********************
+FOOTER STYLES
+*********************/
+
+.footer {
+	clear: both;
+	border-top: 1px solid $text-color;
+}

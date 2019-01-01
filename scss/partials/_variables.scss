@@ -1,0 +1,56 @@
+/******************************************************************
+Site Name: AM7
+Stylesheet: Variables
+
+******************************************************************/
+
+/*********************
+COLORS
+*********************/
+$theme-green:		#207737;
+$theme-red:			#BE3622;
+$theme-orange:		#EDA741;
+$theme-blue: 		#373DC4;
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #323944;
+$white:             #fff;
+
+$light-gray:        #f1f1f1;
+$mid-gray: 			#ccc;
+$gray:              #eaedf2;
+$text-color:        #333;
+$meta-gray:         #9fa6b4;
+$disabled-gray:     #cfcfcf;
+
+$light-blue-bg:     #aad5ff;
+$bright-green:      #27A324;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$link-color:        $theme-red;
+$link-hover:        lighten($theme-red, 20%);
+
+$border-color:      $mid-gray;
+
+/***************************************
+    BREAKPOINTS
+****************************************/
+$bp-small:			30em; /* 480px */
+$bp-medium:			44em; /* 704px */
+$bp-large:			58em; /* 928px */
+$bp-huge:			70em; /* 1120px */
+
+/***************************************
+	OTHERS
+***************************************/
+$radius:			4px;
+$skew: 				1.5deg;
+$base-font-size:    16px;
+$base-font-size2:   18px;
+$line-height: 		1.5;

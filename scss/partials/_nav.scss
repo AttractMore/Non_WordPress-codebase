@@ -1,0 +1,169 @@
+.header-nav {
+	background:$theme-green;
+	margin-top: 1em;
+}
+/*! responsive-nav.js 1.0.39 by @viljamis */
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none;
+}
+
+.nav-collapse li {
+  width: 100%;
+  display: block;
+  padding:0.75em 1em;
+  a, a:hover, a:focus {
+	  color:$black;
+	  display:block;
+  }
+  &:hover, &:focus {
+	  background:darken($theme-green, 5%);
+	  a, a:selected, a:hover, a:focus {
+		  color:$black;
+	  }
+  }
+  &.current-menu-item {
+	  background:lighten($theme-green, 10%);
+	  a {
+		  &:hover, &:focus {
+			  color:$black;
+			  cursor:default;
+		  }
+	  }
+  }
+}
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+  padding:0;
+  margin:0 0 0.5em 0;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.nav-toggle {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  outline:none;
+	position:absolute;
+	top:0.5em;
+	right:0;
+	text-decoration:none;
+	border:1px solid $text-color;
+	padding:0.5em;
+	@include border-radius(4px);
+	text-transform:lowercase;
+	color:$text-color;
+	&:hover, &:focus {
+		color:$text-color;
+	}
+}
+@media screen and (min-width: $bp-small) {
+	.nav-toggle {
+		top:0.6em;
+		right:0;
+	}
+}
+
+
+@media screen and (min-width: $bp-large) {
+	.header-nav {
+	  width:64%;
+	  float:right;
+	  text-align:right;
+	  background:none;
+	  margin: 1em 0 0;
+	}
+	.nav-collapse {
+		li {
+			&:hover, &:focus {
+				background:none;
+			}
+		}
+	}
+		
+  .js .nav-collapse {
+    position: relative;
+	li {
+		margin:0 0.5em;
+		padding:0;
+		display:inline-block;
+		width:auto;
+		&:last-child {
+			margin-right:0;
+		}
+		&:hover, &:focus {
+			background:none;
+		}
+		a {
+			padding:0.75em;
+			color:$text-color;
+			text-transform:uppercase;
+			position:relative;
+			background:none;
+			@include transition(all 0.3s ease-out 0s);
+			&:after {
+				position: absolute;
+				left: 50%;
+				margin: 0;
+				content: '';
+				bottom: 10px;
+				height: 2px;
+				width: 0%;
+				@include transform(translate(-50%, 0));
+				@include transition(all 0.3s ease-out 0s);
+				background:$theme-green;
+			}
+			&:hover:after {
+				width:100%;
+			}
+		}
+		&.current-menu-item {
+			background:none;
+			a {
+				color:$text-color;
+				&:after {
+					width:100%;
+				}
+			}
+		}
+	}
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+body.page-website-creation .side-menu a.website-creation,
+body.page-search-engine-optimisation .side-menu a.seo,
+body.page-website-reviews-renovation .side-menu a.website-reviews,
+body.page-email-marketing .side-menu a.email-marketing,
+body.page-branding-graphic-design .side-menu a.branding,
+body.page-website-support-maintenance .side-menu a.support-maintenance,
+body.page-understanding-your-business .side-menu a.understanding,
+body.page-project-management .side-menu a.pm,
+body.page-responsive-web-design .side-menu a.responsive,
+body.page-content-creation .side-menu a.content,
+body.page-web-development-website-testing .side-menu a.testing,
+body.page-website-migration-implementation .side-menu a.migration {
+	color: lighten($link-color, 25%);
+	cursor:default;
+}
